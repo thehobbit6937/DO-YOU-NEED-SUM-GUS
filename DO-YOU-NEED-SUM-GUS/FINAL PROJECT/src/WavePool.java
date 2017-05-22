@@ -42,5 +42,6 @@ public class WavePool extends Rides
     System.out.println("Distance Between Waves : " + wavelength);
     System.out.println("Frequency of Waves : " + frequency);
     System.out.println("Time Between Waves and no Waves : " + perbtw);
+    System.out.println("Period of Wave : " + findPeriod);
   }
 }
