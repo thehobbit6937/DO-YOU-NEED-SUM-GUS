@@ -1,6 +1,6 @@
 package food;
 import java.util.Scanner;
-public class FoodAndDrinks
+public class FoodAndDrinks extends AmusePark
 {
 	private double cost;
 	public FoodAndDrinks()
