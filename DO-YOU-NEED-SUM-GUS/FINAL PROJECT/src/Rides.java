@@ -6,19 +6,20 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 public class Rides implements EmpInfo {
-	private String empName, name;
+	private String empName;
 	private double empSalary;
+	private String rname;
 	
 	public Rides() {
 		empName = "";
 		empSalary = 0;
-		name = "";
+		rname = "";
 	}
 	
-	public Rides(String em, double sal,String nam) {
+	public Rides(String em, double sal, String r) {
 		empName = em;
 		empSalary = sal;
-		name = nam;
+		rname = r;
 	}
 
 	public double getSalary() {
@@ -32,18 +33,20 @@ public class Rides implements EmpInfo {
 	public String getName() {
 		return empName;
 	}
-	
-	public String getRideName() {
-		return name;
-	}
+
 	public void setName(String n) {
 		empName = n;
 	}
 	
-	public void setRideName(String HallyIsSux){
-		name = HallyIsSux;
-	}
 	
+	public String getRname() {
+		return rname;
+	}
+
+	public void setRname(String rname) {
+		this.rname = rname;
+	}
+
 	public void playSound() {
     	try{
             AudioInputStream ais = AudioSystem.getAudioInputStream
