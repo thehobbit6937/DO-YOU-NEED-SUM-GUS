@@ -9,7 +9,6 @@ import java.util.ArrayList;
 public class Rides implements EmpInfo {
 	private String empName;
 	private double empSalary;
-	ArrayList<Rides> names = new ArrayList<Rides>();
 	
 	public Rides() {
 		empName = "";
