@@ -3,28 +3,19 @@ public class Comet extends Rides {
 	private double height;
 	private int numLoops;
 	private int numTwists;
-	private String rname;
 	
 	public Comet() {
+		super();
 		height = 0;
 		numLoops = 0;
 		numTwists = 0;
-		setRname("");
 	}
 	
-	public Comet(double h, int l, int t, String r) {
+	public Comet(String n, double sal, String r, double h, int l, int t) {
+		super(n, sal, r);
 		height = h;
 		numLoops = l;
 		numTwists = t;
-		setRname(r);
-	}
-	
-	public String getRname() {
-		return rname;
-	}
-
-	public void setRname(String rname) {
-		this.rname = rname;
 	}
 
 	public void scareRating() {
