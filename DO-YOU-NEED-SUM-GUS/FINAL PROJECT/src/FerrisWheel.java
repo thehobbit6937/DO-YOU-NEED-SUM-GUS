@@ -3,27 +3,20 @@ public class FerrisWheel extends Rides {
 	private int numCars;
 	private int radius;
 	private int rounds;
-	private String rname;
 	
 	public FerrisWheel() {
+		super();
 		numCars = 0;
 		radius = 0;
 		rounds = 0;
-		setRname("");
 	}
-	public FerrisWheel(int c, int r, int ro, String rn) {
+	public FerrisWheel(String n, double sal, String rn, int c, int r, int ro) {
+		super(n, sal, rn);
 		numCars = c;
 		radius = r;
 		rounds = ro;
-		setRname(rn);
 	}
-	
-	public String getRname() {
-		return rname;
-	}
-	public void setRname(String rname) {
-		this.rname = rname;
-	}
+
 	public void distance() {
 		double circum = Math.PI * 2 * radius;
 		double dist = circum * rounds;
@@ -36,4 +29,3 @@ public class FerrisWheel extends Rides {
 				"  Number of rounds: " + rounds);
 	}
 }
-
