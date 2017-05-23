@@ -9,7 +9,7 @@ public class AmusePark {
 		listI.add(gasI);
 		Gravitron gravI = new Gravitron("Alapotel", 20000, 70.3, 50, 10, "SpaceFlight");
 		listI.add(gravI);
-		HauntedHouse hhI = new HauntedHouse("Nanona", 30000, 30, 20, 10);
+		HauntedHouse hhI = new HauntedHouse("Nanona", 30000, 30, 20, 10, "Haunted Villa");
 		listI.add(hhI);
 		Comet cometI = new Comet(1001, 5, 10, "Comet");
 		listI.add(cometI);
