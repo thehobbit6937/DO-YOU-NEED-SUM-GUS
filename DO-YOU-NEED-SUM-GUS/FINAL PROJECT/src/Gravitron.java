@@ -3,30 +3,19 @@ public class Gravitron extends Rides {
 	private double velocity;
 	private int riderMass;
 	private double radius;
-	private String rname;
 	
 	public Gravitron() {
 		super();
 		velocity = 0;
 		riderMass = 0;
 		radius = 0;
-		setRname("");
 	}
 	
-	public Gravitron(String name, double salary, double v, int m, double r, String rn) {
-		super(name, salary);
+	public Gravitron(String name, double salary, String rn, double v, int m, double r) {
+		super(name, salary, rn);
 		velocity = v;
 		riderMass = m;
 		radius = r;
-		setRname(rn);
-	}
-	
-	public String getRname() {
-		return rname;
-	}
-
-	public void setRname(String rname) {
-		this.rname = rname;
 	}
 
 	public double force() {
@@ -41,6 +30,6 @@ public class Gravitron extends Rides {
 	
 	public void printAttributes() {
 		System.out.println("Rider Mass: " + riderMass + "  Velocity: " + velocity
-					+ "Radius of Gravitrons: " + radius);
+					+ "  Radius of Gravitron: " + radius);
 	}
 }
