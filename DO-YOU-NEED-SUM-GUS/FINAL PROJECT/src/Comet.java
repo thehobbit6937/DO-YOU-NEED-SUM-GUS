@@ -3,19 +3,30 @@ public class Comet extends Rides {
 	private double height;
 	private int numLoops;
 	private int numTwists;
+	private String rname;
 	
 	public Comet() {
 		height = 0;
 		numLoops = 0;
 		numTwists = 0;
+		setRname("");
 	}
 	
-	public Comet(double h, int l, int t) {
+	public Comet(double h, int l, int t, String r) {
 		height = h;
 		numLoops = l;
 		numTwists = t;
+		setRname(r);
 	}
 	
+	public String getRname() {
+		return rname;
+	}
+
+	public void setRname(String rname) {
+		this.rname = rname;
+	}
+
 	public void scareRating() {
 		if (height > 1000 || numLoops > 3 || numTwists > 5) {
 			System.out.println("This ride has a high scare rating!");
