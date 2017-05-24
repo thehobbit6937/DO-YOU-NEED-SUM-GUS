@@ -27,6 +27,7 @@ public class Shops {
 		System.out.println("How many shirts would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getShirtPrice());
+		scan.close();
 		System.out.println("Your cost is: $" + cost);
 	}
 	//returns the price of sweatpants
@@ -39,6 +40,7 @@ public class Shops {
 		System.out.println("How many sweatpants would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getSWPPrice());
+		scan.close();
 		System.out.println("Your cost is: $" + cost);
 	}
 	//returns the price of a hoodie
@@ -51,6 +53,7 @@ public class Shops {
 		System.out.println("How many hoodies would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getHoodPrice());
+		scan.close();
 		System.out.println("Your cost is: $" + cost);
 	}
 	//returns the price of a cup
@@ -63,6 +66,7 @@ public class Shops {
 		System.out.println("How many cups would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getCupPrice());
+		scan.close();
 		System.out.println("Your cost is: $" + cost);
 	}
 	//returns the price of a picture
@@ -75,6 +79,7 @@ public class Shops {
 		System.out.println("How many pictures would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getPicPrice());
+		scan.close();
 		System.out.println("Your cost is: $" + cost);
 	}
 	//method to buy merchandise
@@ -103,6 +108,7 @@ public class Shops {
 			else
 				break;
 		}
+		scan.close();
 	}
 }
 
