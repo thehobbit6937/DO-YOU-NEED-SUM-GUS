@@ -78,4 +78,11 @@ public class FoodAndDrinks extends Shops
 		scan.close();
 		return(cost);
 	}
+	//returning total cost by adding each individual cost
+	public void total()
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Your total is " + (HBCost()+HDCost()+WCost()+SCost()) + ".");
+		scan.close();
+	}
 }
