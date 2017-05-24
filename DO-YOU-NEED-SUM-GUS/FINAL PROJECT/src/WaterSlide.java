@@ -7,9 +7,9 @@ public class WaterSlide extends Rides
 		super();
 		speed = 0;
 	}
-	public WaterSlide(String Nam, int gal, double sp)
+	public WaterSlide(String Nam, double sp)
 	{
-		super(Nam,gal);
+		super(Nam);
 		speed = sp;
 	}
 	public void setSpeed(double x)
