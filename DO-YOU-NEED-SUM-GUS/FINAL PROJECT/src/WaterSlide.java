@@ -7,9 +7,9 @@ public class WaterSlide extends Rides
 		super();
 		speed = 0;
 	}
-	public WaterSlide(String Nam, double sp)
+	public WaterSlide(String enam, double sal, String name, double sp)
 	{
-		super(Nam);
+		super(enam, sal, nam);
 		speed = sp;
 	}
 	public void setSpeed(double x)
@@ -22,16 +22,7 @@ public class WaterSlide extends Rides
 	}
 	public void printSlide()
 	{
-		System.out.println("Name : " + getRideName());
-		System.out.println("Gallons of water per  hour : " + getRideGallonsPerHour() + " G/h");
+		System.out.println("Name : " + getRname());
 		System.out.println("Average Speed of person on slide : " + speed + " m/s");
-	}
-	public void printEmpSlide()
-	{
-		for(Employees d: getEmpInfo())
-		{
-			System.out.println(d.getEmpName());
-			System.out.println(d.getSalary());
-		}
 	}
 }
