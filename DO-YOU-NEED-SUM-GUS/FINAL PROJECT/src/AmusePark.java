@@ -15,6 +15,10 @@ public class AmusePark {
 		listI.add(cometI);
 		FerrisWheel fwI = new FerrisWheel("Ehnanoona", 18700, "Wheel of Fun", 20, 25, 15);
 		listI.add(fwI);
+		Pharoah pI = new Pharoah("Mookalook", 30000, "Pendulum of Death", 30, 50, 5, 1000);
+		listI.add(pI);
+		FoodAndDrinks yum = new FoodAndDrinks();
+		
 		
 		System.out.println("GAS Information: ");
 		System.out.println("Employee Name: " + gasI.getName() + 
@@ -58,7 +62,29 @@ public class AmusePark {
 		System.out.println(" ");
 		System.out.println("Ride Names: ");
 		for(int i = 0; i<listI.size(); i++) {
-			System.out.print(listI.get(i).getRname() + ", ");
+			if(i == (listI.size()-1))      
+				System.out.println(listI.get(i).getRname() + ".");
+			else
+				System.out.print(listI.get(i).getRname() + ", ");
 		}
+		
+		System.out.println(" ");
+		System.out.println("Pharoah Information: ");
+		System.out.println("The position you are at is: " + pI.distance() + " m");
+		pI.velocity();
+		pI.acceleration();
+		System.out.println("The total energy you have is: " + pI.energyT() + " J");
+		System.out.println("The total kinetic energy at the position is: "
+				+ pI.energyK() + " J");
+		pI.energyP();
+		
+		System.out.println(" ");
+		System.out.println("Food Information: ");
+		yum.HBCost();
+		yum.HDCost();
+		yum.WCost();
+		yum.SCost();
+		yum.total();
+
 	}
 }
