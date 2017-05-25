@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Shops {
 	//private data that represents merchandise that can be sold
+	Scanner scan=new Scanner(System.in);
 	private int shirt;
 	private int sweatpants;
 	private int hoodie;
@@ -23,12 +24,10 @@ public class Shops {
 	}
 	//method to buy a shirt
 	public int buyShirt() {
-		int cost=0;
-		Scanner scan=new Scanner(System.in);
+		int cost=0;		
 		System.out.println("How many shirts would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getShirtPrice());
-		scan.close();
 		return cost;
 	}
 	//returns the price of sweatpants
@@ -37,12 +36,10 @@ public class Shops {
 	}
 	//method to buy sweatpants
 	public int buySWP() {
-		int cost=0;
-		Scanner scan=new Scanner(System.in);
+		int cost=0;		
 		System.out.println("How many sweatpants would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getSWPPrice());
-		scan.close();
 		return cost;
 	}
 	//returns the price of a hoodie
@@ -52,11 +49,9 @@ public class Shops {
 	//method to buy a hoodie
 	public int buyHood() {
 		int cost=0;
-		Scanner scan=new Scanner(System.in);
 		System.out.println("How many hoodies would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getHoodPrice());
-		scan.close();
 		return cost;
 	}
 	//returns the price of a cup
@@ -66,11 +61,9 @@ public class Shops {
 	//method to buy a cup
 	public int buyCup() {
 		int cost=0;
-		Scanner scan=new Scanner(System.in);
 		System.out.println("How many cups would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getCupPrice());
-		scan.close();
 		return cost;
 	}
 	//returns the price of a picture
@@ -80,11 +73,9 @@ public class Shops {
 	//method to buy pictures
 	public int buyPics() {
 		int cost=0;
-		Scanner scan=new Scanner(System.in);
 		System.out.println("How many pictures would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getPicPrice());
-		scan.close();
 		return cost;
 	}
 	//method to find the total cost
@@ -94,7 +85,6 @@ public class Shops {
 	}
 	//method to buy merchandise
 	public void buyMerch() {
-		Scanner scan=new Scanner(System.in);
 		int i=0;
 		int c1=0;
 		int c2=0;
@@ -123,6 +113,6 @@ public class Shops {
 				break;
 		}
 		System.out.println("Your total cost is: $" + total(c1, c2, c3, c4, c5));
-		scan.close();
 	}
+	scan.close();
 }
