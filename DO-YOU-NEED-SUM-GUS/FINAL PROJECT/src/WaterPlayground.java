@@ -11,9 +11,9 @@ public class WaterPlayground extends Rides
 		gallonsperhour = 0;
 		isbucketfull = false;// false means that it is not yet full yet
 	}
-	public WaterPlayground(int max, int gal, boolean poo)
+	public WaterPlayground(String em, double sal, String r, int max, int gal, boolean poo)
 	{
-		super(?);
+		super(em, sal, r);
 		maxkids = max;
 		gallonsperhour = gal;
 		isbucketfull = poo;
@@ -29,6 +29,14 @@ public class WaterPlayground extends Rides
 			System.out.println("Needs to be filled");
 		else
 			System.out.println("It's COMING DOWN!!!!");
-      isbucketfull =false;//Changes to false so the program will need the fill the bucket again
+      		isbucketfull =false;//Changes to false so the program will need the fill the bucket again
+	}
+	 public void setGallonsperhour(int r)
+ 	{
+  	  gallonsperhour = r;
+	}
+ 	public int getGallonsperhour()
+	{
+	  return gallonsperhour;
 	}
 }
