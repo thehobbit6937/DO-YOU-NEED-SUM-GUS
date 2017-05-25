@@ -22,85 +22,99 @@ public class Shops {
 		return shirt;
 	}
 	//method to buy a shirt
-	public void buyShirt(int cost) {
+	public int buyShirt() {
+		int cost=0;
 		Scanner scan=new Scanner(System.in);
 		System.out.println("How many shirts would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getShirtPrice());
 		scan.close();
-		System.out.println("Your cost is: $" + cost);
+		return cost;
 	}
 	//returns the price of sweatpants
 	public int getSWPPrice() {
 		return sweatpants;
 	}
 	//method to buy sweatpants
-	public void buySWP(int cost) {
+	public int buySWP() {
+		int cost=0;
 		Scanner scan=new Scanner(System.in);
 		System.out.println("How many sweatpants would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getSWPPrice());
 		scan.close();
-		System.out.println("Your cost is: $" + cost);
+		return cost;
 	}
 	//returns the price of a hoodie
 	public int getHoodPrice() {
 		return hoodie;
 	}
 	//method to buy a hoodie
-	public void buyHood(int cost) {
+	public int buyHood() {
+		int cost=0;
 		Scanner scan=new Scanner(System.in);
 		System.out.println("How many hoodies would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getHoodPrice());
 		scan.close();
-		System.out.println("Your cost is: $" + cost);
+		return cost;
 	}
 	//returns the price of a cup
 	public int getCupPrice() {
 		return cup;
 	}
 	//method to buy a cup
-	public void buyCup(int cost) {
+	public int buyCup() {
+		int cost=0;
 		Scanner scan=new Scanner(System.in);
 		System.out.println("How many cups would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getCupPrice());
 		scan.close();
-		System.out.println("Your cost is: $" + cost);
+		return cost;
 	}
 	//returns the price of a picture
 	public int getPicPrice() {
 		return pictures;
 	}
 	//method to buy pictures
-	public void buyPics(int cost) {
+	public int buyPics() {
+		int cost=0;
 		Scanner scan=new Scanner(System.in);
 		System.out.println("How many pictures would you like to buy?");
 		int n=scan.nextInt();
 		cost=cost+(n*getPicPrice());
 		scan.close();
-		System.out.println("Your cost is: $" + cost);
+		return cost;
+	}
+	//method to find the total cost
+	public int total(int a, int b, int c, int d, int e) {
+		int sum=a+b+c+d+e;
+		return sum;
 	}
 	//method to buy merchandise
 	public void buyMerch() {
 		Scanner scan=new Scanner(System.in);
 		int i=0;
-		int c=0;
+		int c1=0;
+		int c2=0;
+		int c3=0;
+		int c4=0;
+		int c5=0;
 		while(i>=0) {
 			System.out.println("What would you like to buy? 1-shirt, 2-sweatpants, 3-hoodie, "
 					+ "4-cup, 5-pictures");
 			int n=scan.nextInt();
 			if(n==1)
-				buyShirt(c);
+				c1=buyShirt();
 			if(n==2)
-				buySWP(c);
+				c2=buySWP();
 			if(n==3)
-				buyHood(c);
+				c3=buyHood();
 			if(n==4)
-				buyCup(c);
+				c4=buyCup();
 			if(n==5)
-				buyPics(c);
+				c5=buyPics();
 			System.out.println("Would you like to buy anything else? 1-yes, 2-no");
 			int num=scan.nextInt();
 			if(num==1)
@@ -108,7 +122,7 @@ public class Shops {
 			else
 				break;
 		}
+		System.out.println("Your total cost is: $" + total(c1, c2, c3, c4, c5));
 		scan.close();
 	}
 }
-
