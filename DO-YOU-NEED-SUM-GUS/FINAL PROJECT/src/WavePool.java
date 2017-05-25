@@ -30,7 +30,7 @@ public class WavePool extends Rides
   }
   public double findPeriod()
   {
-    return frequency/(2*Math.PI);
+    return (2*Math.PI)/frequency;
   {
   public void setTimeBetweenWave(int time)
   {
