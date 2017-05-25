@@ -3,6 +3,7 @@ package Finito;
 import java.util.Scanner;
 
 public class Ticket extends Entry {
+	Scanner scan=new Scanner(System.in);
 	//private data--numsold is the amount of tickets that have been currently sold
 	private int numsold;
 	//fastpass is a type of ticket that allows you to go on all the rides but you do not need to wait as long on the line
@@ -40,7 +41,6 @@ public class Ticket extends Entry {
 		int totalcost=0;
 		//while loop used to start sequence if someone wants to purchase tickets
 		while(i>=0) {
-			Scanner scan=new Scanner(System.in);
 			System.out.println("What type of ticket would you like to purchase? 1-regular, 2-fast pass");
 			int n=scan.nextInt();
 			if(n==1) {
@@ -68,7 +68,7 @@ public class Ticket extends Entry {
 					break;
 			}
 		}
-		scan.close();
 		System.out.println("Your total cost is: $" + totalcost);
 	}
+	scan.close();
 }
