@@ -114,5 +114,4 @@ public class Shops {
 		}
 		System.out.println("Your total cost is: $" + total(c1, c2, c3, c4, c5));
 	}
-	scan.close();
 }
