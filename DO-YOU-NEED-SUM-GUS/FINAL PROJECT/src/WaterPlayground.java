@@ -1,7 +1,7 @@
 
 public class WaterPlayground extends Rides
 {
-	private int maxkids, gallonsperhour;
+	private int maxkids, gallonsperhour;//maxkids: the amount of kids on the ride, gallonsperhuor: how many gallons perhour
 	private boolean isbucketfull;//the "bucket" is a giant a pale of water over the whole playground the drops ever so often
   
   public WaterPlayground()
