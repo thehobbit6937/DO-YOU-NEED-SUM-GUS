@@ -70,5 +70,4 @@ public class Ticket extends Entry {
 		}
 		System.out.println("Your total cost is: $" + totalcost);
 	}
-	scan.close();
 }
