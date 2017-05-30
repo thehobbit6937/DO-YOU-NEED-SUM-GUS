@@ -3,6 +3,8 @@ public class Gravitron extends Rides {
 	private double velocity;
 	private int riderMass;
 	private double radius;
+	private int minAge = 9;
+	private double minHeight = 3.4;
 	
 	public Gravitron() {
 		super();
@@ -16,6 +18,14 @@ public class Gravitron extends Rides {
 		velocity = v;
 		riderMass = m;
 		radius = r;
+	}
+	
+	public int getMinAge() {
+		return minAge;
+	}
+	
+	public double getMinHeight() {
+		return minHeight;
 	}
 
 	public double force() {
