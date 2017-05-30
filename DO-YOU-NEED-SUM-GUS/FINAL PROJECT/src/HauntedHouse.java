@@ -4,18 +4,31 @@ public class HauntedHouse extends Rides {
 	private int numGhosts;
 	private int numBodies;
 	private int numZombies;
+	private int minAge = 14;
+	private double minHeight = 5.3;
+	
 	
 	public HauntedHouse() {
 		super();
 		numGhosts = 0;
 		numBodies = 0;
 		numZombies = 0;
+		minAge = 14;
+		minHeight = 5.3;
 	}
 	public HauntedHouse(String name, double salary, String rn, int g, int b, int z) {
 		super(name, salary, rn);
 		numGhosts = g;
 		numBodies = b;
 		numZombies = z;
+	}
+	
+	public int getMinAge() {
+		return minAge;
+	}
+	
+	public double getMinHeight() {
+		return minHeight;
 	}
 
 	public void scary() {
