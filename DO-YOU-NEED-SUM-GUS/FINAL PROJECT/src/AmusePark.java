@@ -143,12 +143,14 @@ public class AmusePark {
 		System.out.println("Total Profits: ");
 		double numFP = .2 * entry.getPop();
 		double numReg = entry.getPop() - numFP;
+		double util = 0;
 		double spent = yum.totalCosts() + stuff.total(stuff.getCupPrice(), stuff.getHoodPrice(), 
 				stuff.getPicPrice(), stuff.getShirtPrice(), stuff.getSWPPrice()) 
 					+ stuff.getMerch();
 		double profit = (spent * entry.getPop()) + (numFP * tI.getFPPrice()) + 
 				(numReg * tI.getTixPrice());
-		System.out.println("The total profit of the day is " + comma(profit));
+		util = .1 * profit;
+		System.out.println("The total profit of the day is " + comma(util));
 		
 		
 	}
