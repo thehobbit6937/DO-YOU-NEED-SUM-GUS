@@ -3,6 +3,8 @@ public class Comet extends Rides {
 	private double height;
 	private int numLoops;
 	private int numTwists;
+	private int minAge = 12;
+	private double minHeight = 4.8;
 	
 	public Comet() {
 		super();
@@ -16,6 +18,14 @@ public class Comet extends Rides {
 		height = h;
 		numLoops = l;
 		numTwists = t;
+	}
+	
+	public int getMinAge() {
+		return minAge;
+	}
+	
+	public double getMinHeight() {
+		return minHeight;
 	}
 
 	public void scareRating() {
