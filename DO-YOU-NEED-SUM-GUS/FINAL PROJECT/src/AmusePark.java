@@ -2,6 +2,14 @@
 import java.util.ArrayList;
 
 public class AmusePark {
+	
+	//public String comma(double x) {
+		//ArrayList<String>let = new ArrayList<String>();
+		//toString(x);
+		//for(int i = 0; i<x.length(); i++) {
+			
+		//}
+	//}
 
 	public static void main(String[] args) {
 		ArrayList<Rides> listI = new ArrayList<Rides>();
@@ -18,12 +26,28 @@ public class AmusePark {
 		Pharoah pI = new Pharoah("Mookalook", 30000, "Pendulum of Death", 30, 50, 5, 1000);
 		listI.add(pI);
 		FoodAndDrinks yum = new FoodAndDrinks();
+		Shops stuff = new Shops();
+		Ticket tI = new Ticket();
+		People pplI = new People(5.7, 18);
+		People pplII = new People(2.9, 5);
+		Entry entry = new Entry();
+		entry.setPop(50000);
 		
+		System.out.println("Ticket Purchase: ");
+		System.out.println("Fast Pass Price: " + tI.getFPPrice());
+		System.out.println("Regular Ticket Price: " + tI.getTixPrice());
+		tI.buyTix();
+		tI.getNumSold();
 		
+		System.out.println(" ");
 		System.out.println("GAS Information: ");
 		System.out.println("Employee Name: " + gasI.getName() + 
 				"  Employee Salary: " + gasI.getSalary());
 		gasI.isSafe();
+		if(pplI.getAge() > gasI.getMinAge() && pplI.getHeight() > gasI.getMinHeight())
+			System.out.println("Person 1 may ride this ride.");
+		else
+			System.out.println("Person 1 may not ride this ride.");
 		gasI.printAttributes();
 		
 		System.out.println(" ");
@@ -32,6 +56,10 @@ public class AmusePark {
 				"  Employee Salary: " + gravI.getSalary());
 		gravI.force();
 		gravI.safeGs();
+		if(pplII.getAge() > gravI.getMinAge() && pplII.getHeight() > gravI.getMinHeight())
+			System.out.println("Person 2 may ride this ride.");
+		else
+			System.out.println("Person 2 may not ride this ride.");
 		gravI.printAttributes();
 		
 		System.out.println(" ");
@@ -43,6 +71,10 @@ public class AmusePark {
 			System.out.println("BOO!");
 			hhI.playSound();
 		}
+		if(pplI.getAge() > hhI.getMinAge() && pplI.getHeight() > hhI.getMinHeight())
+			System.out.println("Person 1 may ride this ride.");
+		else
+			System.out.println("Person 1 may not ride this ride.");
 		hhI.printAttributes();
 		
 		System.out.println(" ");
@@ -57,6 +89,10 @@ public class AmusePark {
 		System.out.println("Employee Name: " + fwI.getName() + 
 				"  Employee Salary: " + fwI.getSalary());
 		fwI.distance();
+		if(pplII.getAge() > fwI.getMinAge() && pplII.getHeight() > fwI.getMinHeight())
+			System.out.println("Person 2 may ride this ride.");
+		else
+			System.out.println("Person 2 may not ride this ride.");
 		fwI.printAttributes();
 		
 		System.out.println(" ");
@@ -77,6 +113,10 @@ public class AmusePark {
 		System.out.println("The total kinetic energy at the position is: "
 				+ pI.energyK() + " J");
 		pI.energyP();
+		if(pplI.getAge() > pI.getMinAge() && pplI.getHeight() > pI.getMinHeight())
+			System.out.println("Person 1 may ride this ride.");
+		else
+			System.out.println("Person 1 may not ride this ride.");
 		
 		System.out.println(" ");
 		System.out.println("Food Information: ");
@@ -85,6 +125,28 @@ public class AmusePark {
 		yum.WCost();
 		yum.SCost();
 		yum.total();
-
+		
+		System.out.println(" ");
+		System.out.println("Shop Information: ");
+		stuff.buyMerch();
+		stuff.buyCup();
+		stuff.buyPics();
+		stuff.buyShirt();
+		stuff.buySWP();
+		stuff.total(stuff.getCupPrice(), stuff.getHoodPrice(), 
+				stuff.getPicPrice(), stuff.getShirtPrice(), stuff.getSWPPrice());
+		
+		System.out.println(" ");
+		System.out.println("Total Profits: ");
+		double numFP = .2 * entry.getPop();
+		double numReg = entry.getPop() - numFP;
+		double spent = yum.totalCosts() + stuff.total(stuff.getCupPrice(), stuff.getHoodPrice(), 
+				stuff.getPicPrice(), stuff.getShirtPrice(), stuff.getSWPPrice()) 
+					+ stuff.getMerch();
+		double profit = (spent * entry.getPop()) + (numFP * tI.getFPPrice()) + 
+				(numReg * tI.getTixPrice());
+		System.out.println("The total profit of the day is " + profit);
+		
+		
 	}
 }
