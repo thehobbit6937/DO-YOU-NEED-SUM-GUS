@@ -31,6 +31,6 @@ public class Hurricane extends Rides
  {
     System.out.println("Name : " + getRname);
     System.out.println("Dankness level : " + dankness);
-    System.out.printll("Gallons Per Hour : " + gallonsperhour);
+    System.out.println("Gallons Per Hour : " + gallonsperhour);
  }
 }
