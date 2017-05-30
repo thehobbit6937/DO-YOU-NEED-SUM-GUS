@@ -3,13 +3,16 @@ import java.util.ArrayList;
 
 public class AmusePark {
 	
-	//public String comma(double x) {
-		//ArrayList<String>let = new ArrayList<String>();
-		//toString(x);
-		//for(int i = 0; i<x.length(); i++) {
-			
-		//}
-	//}
+	public String comma(double x) {
+		ArrayList<String>let = new ArrayList<String>();
+		String y = new Double(x).toString();
+		for(int i = 0; i<x.length(); i++) 
+			let.add(y.subtring(i, i+1));
+		for(int k = let.size()-4; k>=0; k-=3) {
+			if(let.get(k) == 0)
+				let.add(k-1, ",")
+		}		
+	}
 
 	public static void main(String[] args) {
 		ArrayList<Rides> listI = new ArrayList<Rides>();
