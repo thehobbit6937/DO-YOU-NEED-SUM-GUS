@@ -7,7 +7,7 @@ public class Hurricane extends Rides
  {
    super();
    dankness = 9;// Hurricance is high on the dankometer 
-   gallonsperhous = 1000;
+   gallonsperhour = 1000;
  }
   public Hurricane(String enam, double sal, String name, double dank,int gal)
  {
