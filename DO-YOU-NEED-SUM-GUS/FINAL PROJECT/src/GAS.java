@@ -2,6 +2,8 @@
 public class GAS extends Rides{
 	private String weather;
 	private float velocity;
+	private int minAge = 14;
+	private double minHeight = 5.3;
 	
 	public GAS() {
 		super();
@@ -13,6 +15,14 @@ public class GAS extends Rides{
 		super(nam, sala, rn);
 		weather = we;
 		velocity = v;
+	}
+	
+	public int getMinAge() {
+		return minAge;
+	}
+	
+	public double getMinHeight() {
+		return minHeight;
 	}
 
 	public void isSafe() {
