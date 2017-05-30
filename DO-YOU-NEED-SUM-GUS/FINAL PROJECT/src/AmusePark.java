@@ -148,7 +148,7 @@ public class AmusePark {
 					+ stuff.getMerch();
 		double profit = (spent * entry.getPop()) + (numFP * tI.getFPPrice()) + 
 				(numReg * tI.getTixPrice());
-		System.out.println("The total profit of the day is " + profit);
+		System.out.println("The total profit of the day is " + comma(profit));
 		
 		
 	}
