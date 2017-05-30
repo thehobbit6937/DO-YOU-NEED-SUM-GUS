@@ -1,8 +1,11 @@
+
 public class Pharoah extends Rides{
 	private int period;
 	private int amplitude;
 	private int time;
 	private int mass;
+	private int minAge = 10;
+	private double minHeight = 4.0;
 	
 	public Pharoah() {
 		super();
@@ -20,6 +23,14 @@ public class Pharoah extends Rides{
 		mass = m;
 	}
 	
+	public int getMinAge() {
+		return minAge;
+	}
+
+	public double getMinHeight() {
+		return minHeight;
+	}
+
 	public double distance() {
 		double angFreq = (2*Math.PI) / period;
 		double position = amplitude * Math.sin(angFreq * time);
