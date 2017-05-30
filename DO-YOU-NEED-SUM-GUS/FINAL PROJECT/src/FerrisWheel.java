@@ -3,6 +3,8 @@ public class FerrisWheel extends Rides {
 	private int numCars;
 	private int radius;
 	private int rounds;
+	private int minAge = 1;
+	private double minHeight = 1;
 	
 	public FerrisWheel() {
 		super();
@@ -15,6 +17,14 @@ public class FerrisWheel extends Rides {
 		numCars = c;
 		radius = r;
 		rounds = ro;
+	}
+	
+	public int getMinAge() {
+		return minAge;
+	}
+	
+	public double getMinHeight() {
+		return minHeight;
 	}
 
 	public void distance() {
