@@ -1,17 +1,20 @@
-
 import java.util.ArrayList;
 
 public class AmusePark {
 	
-	public String comma(double x) {
+	public static String comma(double x) {
 		ArrayList<String>let = new ArrayList<String>();
+		String n = "";
 		String y = new Double(x).toString();
-		for(int i = 0; i<x.length(); i++) 
-			let.add(y.subtring(i, i+1));
+		for(int i = 0; i<y.length(); i++) 
+			let.add(y.substring(i, i+1));
 		for(int k = let.size()-4; k>=0; k-=3) {
-			if(let.get(k) == 0)
-				let.add(k-1, ",")
-		}		
+			if(let.get(k).equals("0"))
+				let.add(k-1, ",");
+		}	
+		for(int j = 0; j<let.size(); j++)
+			n += let.get(j);
+		return n;
 	}
 
 	public static void main(String[] args) {
