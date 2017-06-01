@@ -1,7 +1,9 @@
 public class WaterPlayground extends Rides
 {
-	private int maxkids, gallonsperhour;//maxkids: the amount of kids on the ride, gallonsperhuor: how many gallons perhour
-	private boolean isbucketfull;//the "bucket" is a giant a pale of water over the whole playground the drops ever so often
+	private int maxkids, gallonsperhour;//maxkids: the amount of kids on the ride, 
+										//gallonsperhuor: how many gallons perhour
+	private boolean isbucketfull;//the "bucket" is a giant a pale of water over the 
+								 //whole playground the drops every so often
 	
 	public WaterPlayground()
 	{
@@ -38,7 +40,8 @@ public class WaterPlayground extends Rides
 		isbucketfull = true;
 		System.out.println("It's FILLING UP!!!");
 	}
-	public void pourTheBucket()//pours the bucket and makes the bucket now empty by setting it to false
+	public void pourTheBucket()//pours the bucket and makes the bucket now empty 
+							   //by setting it to false
 	{
 		if(isbucketfull == false)
 			System.out.println("Needs to be filled");
@@ -48,7 +51,6 @@ public class WaterPlayground extends Rides
 	public void printPlay()
 	{
 		System.out.println("Name : " + getRname());
-		System.out.println("Employee : " + getName());
 		System.out.println("Maximum amount of kids : " + maxkids);
 		System.out.println("Gallons Per Hour : " + gallonsperhour + " G/h");
 	}
