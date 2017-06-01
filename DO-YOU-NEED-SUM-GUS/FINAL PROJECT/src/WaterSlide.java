@@ -1,4 +1,3 @@
-
 public class WaterSlide extends Rides 
 {
 	private double speed;
