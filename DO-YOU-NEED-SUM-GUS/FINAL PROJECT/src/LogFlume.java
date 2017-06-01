@@ -1,4 +1,5 @@
-public class LogFlume extends Rides //Log Flume is practically a water slide except you are in a log 
+public class LogFlume extends Rides //Log Flume is practically a water slide 
+									//except you are in a log 
 {
  	private int peopleinride;// amount of people that can fit in a log
  	private int gallonsperhour;
