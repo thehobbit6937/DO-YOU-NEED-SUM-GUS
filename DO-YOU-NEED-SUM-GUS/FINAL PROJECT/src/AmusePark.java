@@ -155,6 +155,40 @@ public class AmusePark {
 		util = .1 * profit;
 		System.out.println("The total profit of the day is " + comma(util));
 		
+		WaterSlide yes = new WaterSlide("Person", 5.60, "Water Slide", 50, 1000);
+		yes.printSlide();
 		
+		System.out.print("\n");
+		
+		WaterPlayground we = new WaterPlayground("Bob", 2, "Water Playground", 78, 3437, false);
+		we.fillTheBucket();
+		we.pourTheBucket();
+		System.out.print("\n");
+		we.printPlay();
+		
+		System.out.print("\n");
+		
+		Hurricane knights = new Hurricane("Mikel", 2, "Hurricane", 9, 300);;
+		knights.printDank();
+		knights.changeDank(3);
+		
+		System.out.print("\n");
+		
+		WavePool of = new WavePool("Man", 4.20, "Wave Pool", 8, 5.7, 6.9, 15);
+		of.decreaseHeight(4);
+		of.increaseHeight(2);
+		of.printWaves();
+		
+		System.out.print("\n");
+		
+		LogFlume NE = new LogFlume("Female", 634521, "Log Flume", 2, 234235);
+		NE.contractLog();
+		NE.expandLog();
+		NE.expandLog();
+		NE.decreaseWaterFLow(245);
+		NE.increaseWaterFlow(357);
+		NE.printLogFlume();
+		System.out.println("Employee  : "  + NE.getName());// testing if interface works
+		System.out.println("Employee's Salary : " + NE.getSalary());
 	}
 }
