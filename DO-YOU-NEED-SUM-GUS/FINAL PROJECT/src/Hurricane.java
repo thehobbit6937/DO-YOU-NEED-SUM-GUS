@@ -16,7 +16,7 @@ public class Hurricane extends Rides // a ride that shoots you down than you bac
 	}
 	public void changeDank(int r)
 	{
-		dankness =+ r;//changes how awesome the ride is
+		dankness =dankness+ r;//changes how awesome the ride is
 	}
 	public void setGallonsperhour(int r)
 	{
