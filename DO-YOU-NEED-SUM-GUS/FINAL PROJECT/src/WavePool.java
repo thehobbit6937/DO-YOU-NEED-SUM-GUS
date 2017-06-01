@@ -61,7 +61,8 @@ public class WavePool extends Rides
 	}
 	public double findPeriod()
 	{
-		return (2*Math.PI)/frequency;// calculates time it take for one wave to elapse by doing 2 pi over frequency
+		return (2*Math.PI)/frequency;// calculates time it take for one wave to elapse 
+									 //by doing 2 pi over frequency
 	}
 	public void setTimeBetweenWave(int time)
 	{
