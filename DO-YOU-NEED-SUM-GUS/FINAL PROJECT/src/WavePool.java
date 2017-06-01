@@ -53,11 +53,11 @@ public class WavePool extends Rides
 	}
 	public void increaseHeight(double add)
 	{
-		amplitude =+add;// increases the height
+		amplitude =amplitude+add;// increases the height
 	}
 	public void decreaseHeight(double sub)
 	{
-	    amplitude=-sub;//decreases the height of the waves
+	   	amplitude=amplitude-sub;//decreases the height of the waves
 	}
 	public double findPeriod()
 	{
