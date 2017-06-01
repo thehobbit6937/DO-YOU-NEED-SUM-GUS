@@ -29,7 +29,6 @@ public class Hurricane extends Rides // a ride that shoots you down than you bac
 	public void printDank()
 	{
 		System.out.println("Name : " + getRname());
-		System.out.println("Employee : " + getName());// some have this and some don't this is just to see of the interface works
 		System.out.println("Dankness level : " + dankness);
 		System.out.println("Gallons Per Hour : " + gallonsperhour + " G/h");
 	}
