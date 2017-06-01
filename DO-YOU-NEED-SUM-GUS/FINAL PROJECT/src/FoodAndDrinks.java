@@ -53,7 +53,7 @@ public class FoodAndDrinks
 		System.out.println("How many hamburgers are you buying? ");
 		//setting variable equal to user input
 		int ha=scan.nextInt();
-		//computing cost, closing scanner, and returning price
+		//computing cost, closing scanner, returning price
 		int cost=ha*hamburger;
 		setCHD(cost);
 		return(cost);
